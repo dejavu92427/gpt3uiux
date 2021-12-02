@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0;
+    }
+    #Block433_512Container {
+      width: 20%;
+    }
+    #Block433_512Container img {
+      max-width: 100%;
+    }
+    .head {
+      display: flex;
+      width: 100%;
+    }
+    .head > ul {
+      display: flex;
+      list-style: none;
+    }
+    .head > ul > li {
+      flex: 1;
+      text-align: center;
+      font-size: 16px;
+      line-height: 20px;
+      background-color: white;
+      color: black;
+      border: 1px solid #999;
+      border-radius: 10px 10px 0 0;
+      text-decoration: none;
+    }
+    .head > ul > li.active {
+      flex: 1;
+      text-align: center;
+      font-size: 16px;
+      line-height: 20px;
+      background-color: red;
+      color: wheat;
+      border: 1px solid #999;
+      border-radius: 10px 10px 0 0;
+    }
+    .unblock {
+      display: none;
+    }
+  </style>
+  <body>
+    <div id="Block433_512Container" class="tab_box type_4">
+      <div class="head">
+        <ul class="tabs">
+          <li class=""><a href="https://shopping.pchome.com.tw/1212yearend/OOH">給力充電站</a></li>
+          <li class=""><a href="https://www.facebook.com/groups/498729124625585/posts/660434878455008?24_c2_2">官方社團</a></li>
+          <li class="active"><a href="https://www.pchomeec.tw/sites/pchomex?24_c_3">家好選物</a></li>
+          <li class=""><a href="https://bit.ly/3p74eaE">混搭時尚</a></li>
+        </ul>
+      </div>
+      <div class="body">
+        <div class="tab_content unblock">
+          <a class="act_img" href="https://shopping.pchome.com.tw/1212yearend/OOH"
+            ><img src="//b.ecimg.tw/img/h24/v1/layout/index/1/20211129111049_b433-3-500x330.jpg" alt="" title=""
+          /></a>
+        </div>
+        <div class="tab_content unblock">
+          <a class="act_img" href="https://www.facebook.com/groups/498729124625585/posts/660434878455008?24_c2_2_0"
+            ><img src="//b.ecimg.tw/img/h24/v1/layout/index/1/20211125183153_b455-3-500x330.jpg" alt="" title=""
+          /></a>
+        </div>
+        <div class="tab_content unblock">
+          <a class="act_img" href="https://www.pchomeec.tw/sites/pchomex?24_c_3_0"
+            ><img src="//c.ecimg.tw/img/h24/v1/layout/index/1/20211119183220_b474-3-500x330.jpg" alt="" title=""
+          /></a>
+        </div>
+        <div class="tab_content">
+          <a class="act_img" href="https://bit.ly/3p74eaE"
+            ><img src="//f.ecimg.tw/img/h24/v1/layout/index/1/20211129172217_b502-3-500x330.jpg" alt="" title=""
+          /></a>
+        </div>
+      </div>
+    </div>
+    <script>
+      var nav = Array.from(document.querySelectorAll(".head > ul > li"));
+      var bodys = Array.from(document.querySelectorAll(".body > div"));
+      nav.forEach((v, i) => {
+        v.addEventListener("mouseenter", () => {
+          document.querySelector(".head > ul > li.active").classList.remove("active");
+          v.classList.add("active");
+
+          document.querySelector(".body > div:not(.unblock)").classList.add("unblock");
+          bodys[i].classList.remove("unblock");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: var(--color-bg);
+}
+a {
+  color: unset;
+  text-decoration: none;
+}
+/* nav背景漸層 */
+.gradient_bg {
+  /* ff 3.6+ */
+  background: -moz-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 26, 1) 100%);
+
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 26, 1) 100%);
+
+  /* opera 11.10+ */
+  background: -o-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 26, 1) 100%);
+
+  /* ie 10+ */
+  background: -ms-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 26, 1) 100%);
+
+  /* global 92%+ browsers support */
+  background: radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 26, 1) 100%);
+}
+/* nav字體漸層 */
+.gradient_text {
+  background: var(--gradient-text);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section_padding {
+  padding: 4rem 6rem;
+}
+.section_margin {
+  margin: 4rem 6rem;
+}
+
+/* 動畫往中間縮小 */
+.scale-down-center {
+  -webkit-animation: scale-down-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: scale-down-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+@-webkit-keyframes scale-down-center {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+}
+@keyframes scale-down-center {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+}
+/* 動畫往中間縮小 */
+
+@media screen and(max-width:700px) {
+  .section_padding {
+    padding: 4rem;
+  }
+  .section_margin {
+    margin: 4rem;
+  }
+}
+@media screen and(max-width:550px) {
+  .section_padding {
+    padding: 4rem 2rem;
+  }
+  .section_margin {
+    margin: 4rem 2rem;
+  }
+}
