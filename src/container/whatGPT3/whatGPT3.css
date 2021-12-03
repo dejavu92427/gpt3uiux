@@ -11,6 +11,21 @@
   align-items: flex-start;
   margin: 4rem 0;
 }
+.gpt3__whatgpt3-container .gpt3__features {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.gpt3__whatgpt3-container .gpt3__features:nth-child(2) {
+  margin: 1rem;
+}
+@media screen and (max-width: 700px) {
+  .gpt3__whatgpt3-container .gpt3__features:nth-child(2) {
+    margin: 1rem 0;
+  }
+}
+
 .gpt3__whatgpt3-heading h1 {
   max-width: 510px;
   font-family: var(--font-family);
